@@ -4,87 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sabor & Companhia</title>
-
 <link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+<script src="script.js" defer></script>
 </head>
-
 <body>
-
 <header>
-
-<div class="logo">
-🍔 Sabor & Companhia
-</div>
-
+<div class="logo">🍔 Sabor & Companhia</div>
 <nav>
 <a href="index.html">Home</a>
-<a href="cardapio.html">Cardápio</a>
-<a href="contato.html">Contato</a>
-<a href="carrinho.html">Carrinho 🛒</a>
+<a href="hamburguer.html">Hambúrgueres</a>
+<a href="pizza.html">Pizzas</a>
+<a href="bebidas.html">Bebidas</a>
+<a href="bolo.html">Bolos</a>
+<button class="btn-carrinho" onclick="abrirCarrinho()">🛒 Carrinho</button>
 </nav>
-
 </header>
 
 <section class="hero">
-
 <div class="hero-content">
-
-<h1>Os Melhores Lanches da Cidade</h1>
-
-<p>
-Hambúrgueres artesanais, pizzas deliciosas,
-bebidas geladas e sobremesas incríveis.
-</p>
-
-<a href="cardapio.html" class="btn">
-Ver Cardápio
-</a>
-
+<h1>Bem-vindo à Sabor & Companhia</h1>
+<p>Hambúrgueres, pizzas, bebidas e sobremesas deliciosas.</p>
+<a href="hamburguer.html" class="btn">Ver Cardápio</a>
 </div>
-
 </section>
 
-<section class="destaques">
+<footer>© 2026 Sabor & Companhia</footer>
 
-<h2>Destaques</h2>
-
-<div class="cards">
-
-<div class="card">
-<img src="imagens/hamburguer.jpg">
-<h3>Hambúrguer Artesanal</h3>
-</div>
-
-<div class="card">
-<img src="imagens/pizza.jpg">
-<h3>Pizza Especial</h3>
-</div>
-
-<div class="card">
-<img src="imagens/bolo.jpg">
-<h3>Bolo no Pote</h3>
-</div>
-
-</div>
-
-</section>
-
-<a
-class="whatsapp"
-href="https://wa.me/5511999999999"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<footer>
-<p>© 2026 Sabor & Companhia</p>
-</footer>
-
-</body>
-</html>
+<!-- Carrinho lateral -->
+<div id="carrinho-lateral" class="carrinho-fechado">
+<h2>Seu Carrinho</h2>
+<div id="itens-carrinho"></div>
+<label for="bairro">Escolha seu bairro:</label>
+<select id="bairro" onchange="atualizarTotal()">
+<option value="centro" data-taxa="5">Centro - R$5</option>
+<option value="zona-sul" data-taxa="10">Zona Sul - R$10</option>
+<option value="zona-norte" data-taxa="8">Zona Norte - R$8</option>
+<option value="zona-leste" data-taxa="7">Zona Leste - R$7</option>
+</select>
+<p>Total: R$ <span id="total-carrinho">0.00</span></p>
+<button onclick="finalizarPedido()">Finalizar Pedido</button>
+<button onclick="fecharCarrinho()">Fe
