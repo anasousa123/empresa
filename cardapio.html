@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Delícias Express</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Delícias Express" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="carrinho.html">Carrinho</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cardápio</h1>
+        <section class="produtos">
+            <div class="produto">
+                <h3>Brownie</h3>
+                <p>R$8,00</p>
+                <button onclick="addItem(8, 'Brownie')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Hambúrguer</h3>
+                <p>R$12,00</p>
+                <button onclick="addItem(12, 'Hambúrguer')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Pizza Calabresa (4 fatias)</h3>
+                <p>R$14,00</p>
+                <button onclick="addItem(14, 'Pizza Calabresa')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Suco Natural</h3>
+                <p>R$5,00</p>
+                <button onclick="addItem(5, 'Suco Natural')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <h3>Bolo no Pote (Chocolate)</h3>
+                <p>R$8,00</p>
+                <button onclick="addItem(8, 'Bolo no Pote')">Adicionar ao Carrinho</button>
+            </div>
+        </section>
+        <a href="carrinho.html" class="btn">Ir para o Carrinho</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Delícias Express | Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
