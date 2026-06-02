@@ -1,57 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio - Delícias Express</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cardápio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
 </head>
+
 <body>
-    <header>
-        <img src="logo.png" alt="Logo Delícias Express" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cardapio.html">Cardápio</a>
-            <a href="carrinho.html">Carrinho</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Cardápio</h1>
-        <section class="produtos">
-            <div class="produto">
-                <h3>Brownie</h3>
-                <p>R$8,00</p>
-                <button onclick="addItem(8, 'Brownie')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="produto">
-                <h3>Hambúrguer</h3>
-                <p>R$12,00</p>
-                <button onclick="addItem(12, 'Hambúrguer')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="produto">
-                <h3>Pizza Calabresa (4 fatias)</h3>
-                <p>R$14,00</p>
-                <button onclick="addItem(14, 'Pizza Calabresa')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="produto">
-                <h3>Suco Natural</h3>
-                <p>R$5,00</p>
-                <button onclick="addItem(5, 'Suco Natural')">Adicionar ao Carrinho</button>
-            </div>
-            <div class="produto">
-                <h3>Bolo no Pote (Chocolate)</h3>
-                <p>R$8,00</p>
-                <button onclick="addItem(8, 'Bolo no Pote')">Adicionar ao Carrinho</button>
-            </div>
-        </section>
-        <a href="carrinho.html" class="btn">Ir para o Carrinho</a>
-    </main>
+<header>
 
-    <footer>
-        <p>&copy; 2026 Delícias Express | Todos os direitos reservados</p>
-    </footer>
+<div class="logo">
+🍔 Sabor & Companhia
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="contato.html">Contato</a>
+<a href="carrinho.html">Carrinho 🛒</a>
+</nav>
+
+</header>
+
+<h1 class="titulo">
+Nosso Cardápio
+</h1>
+
+<div class="produtos">
+
+<div class="produto">
+
+<img src="imagens/hamburguer.jpg">
+
+<h3>Hambúrguer Artesanal</h3>
+
+<p>R$ 20,00</p>
+
+<button onclick="adicionar('Hambúrguer',20)">
+Adicionar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="imagens/pizza.jpg">
+
+<h3>Pizza Calabresa</h3>
+
+<p>R$ 35,00</p>
+
+<button onclick="adicionar('Pizza',35)">
+Adicionar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="imagens/suco.jpg">
+
+<h3>Suco Natural</h3>
+
+<p>R$ 8,00</p>
+
+<button onclick="adicionar('Suco',8)">
+Adicionar
+</button>
+
+</div>
+
+<div class="produto">
+
+<img src="imagens/bolo.jpg">
+
+<h3>Bolo no Pote</h3>
+
+<p>R$ 10,00</p>
+
+<button onclick="adicionar('Bolo',10)">
+Adicionar
+</button>
+
+</div>
+
+</div>
+
 </body>
 </html>

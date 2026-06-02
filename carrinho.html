@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho - Delícias Express</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+
+<meta charset="UTF-8">
+
+<title>Carrinho</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="script.js"></script>
+
 </head>
-<body>
-    <header>
-        <img src="logo.png" alt="Logo Delícias Express" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="cardapio.html">Cardápio</a>
-            <a href="carrinho.html">Carrinho</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Carrinho</h1>
-        <ul id="lista-carrinho"></ul>
-        <p>Taxa de entrega: R$ <span id="taxa">0.00</span></p>
-        <p>Total: R$ <span id="total">0.00</span></p>
-        <button onclick="finalizarPedido()">Finalizar Pedido</button>
-    </main>
+<body onload="mostrarCarrinho()">
 
-    <footer>
-        <p>&copy; 2026 Delícias Express | Todos os direitos reservados</p>
-    </footer>
+<header>
+
+<div class="logo">
+🍔 Sabor & Companhia
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="contato.html">Contato</a>
+<a href="carrinho.html">Carrinho 🛒</a>
+</nav>
+
+</header>
+
+<h1 class="titulo">
+Seu Carrinho
+</h1>
+
+<div id="carrinho"></div>
+
+<h2 id="total"></h2>
+
 </body>
+
 </html>
