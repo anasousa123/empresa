@@ -5,42 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sabor & Companhia</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
 </head>
 <body>
+
 <header>
-<div class="logo">🍔 Sabor & Companhia</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="hamburguer.html">Hambúrgueres</a>
-<a href="pizza.html">Pizzas</a>
-<a href="bebidas.html">Bebidas</a>
-<a href="bolo.html">Bolos</a>
-<button class="btn-carrinho" onclick="abrirCarrinho()">🛒 Carrinho</button>
-</nav>
+  <div class="logo">🍔 Sabor & Companhia</div>
 </header>
 
-<section class="hero">
-<div class="hero-content">
-<h1>Bem-vindo à Sabor & Companhia</h1>
-<p>Hambúrgueres, pizzas, bebidas e sobremesas deliciosas.</p>
-<a href="hamburguer.html" class="btn">Ver Cardápio</a>
-</div>
-</section>
+<main>
+  <h1>Bem-vindo à Sabor & Companhia!</h1>
+  <p>Escolha sua categoria:</p>
 
-<footer>© 2026 Sabor & Companhia</footer>
+  <div class="categorias">
+    <a href="hamburguer.html" class="btn-categoria">🍔 Hambúrgueres</a>
+    <a href="pizza.html" class="btn-categoria">🍕 Pizzas</a>
+    <a href="bebidas.html" class="btn-categoria">🥤 Bebidas</a>
+    <a href="bolo.html" class="btn-categoria">🍰 Bolos</a>
+  </div>
 
-<!-- Carrinho lateral -->
-<div id="carrinho-lateral" class="carrinho-fechado">
-<h2>Seu Carrinho</h2>
-<div id="itens-carrinho"></div>
-<label for="bairro">Escolha seu bairro:</label>
-<select id="bairro" onchange="atualizarTotal()">
-<option value="centro" data-taxa="5">Centro - R$5</option>
-<option value="zona-sul" data-taxa="10">Zona Sul - R$10</option>
-<option value="zona-norte" data-taxa="8">Zona Norte - R$8</option>
-<option value="zona-leste" data-taxa="7">Zona Leste - R$7</option>
-</select>
-<p>Total: R$ <span id="total-carrinho">0.00</span></p>
-<button onclick="finalizarPedido()">Finalizar Pedido</button>
-<button onclick="fecharCarrinho()">Fe
+  <div class="info-empresa">
+    <h2>Contato e Localização</h2>
+    <p>📍 Endereço: Rua das Delícias, 123 - Centro</p>
+    <p>⏰ Horário: Segunda a Domingo, 10:00 - 22:00</p>
+    <p>📞 Telefone: (11) 98765-4321</p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Sabor & Companhia
+</footer>
+
+</body>
+</html>

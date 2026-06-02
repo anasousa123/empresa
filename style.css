@@ -1,79 +1,75 @@
 /* RESET */
-*{margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif;}
+*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
 
 /* BODY */
-body{background:#F5F5F5; color:#333;}
+body{
+  background:#F5F5F5;
+  color:#333;
+  text-align:center;
+}
 
 /* HEADER */
 header{
-    background:#5C3A21;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:white;
-}
-header .logo{font-size:24px; font-weight:bold;}
-header nav a, header nav button{
-    color:white;
-    text-decoration:none;
-    margin-left:15px;
-    background:none;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
+  background:#5C3A21;
+  color:white;
+  padding:20px;
+  font-size:24px;
+  font-weight:bold;
 }
 
-/* HERO */
-.hero{
-    height:70vh;
-    background:url("imagens/banner.jpg") center/cover no-repeat;
-    display:flex; justify-content:center; align-items:center;
+/* TITULOS */
+h1{
+  margin:30px 0 10px 0;
+  color:#5C3A21;
 }
-.hero-content{
-    background:rgba(92,58,33,0.8);
-    padding:40px;
-    border-radius:20px;
-    text-align:center;
-    color:white;
+h2{
+  margin:20px 0 10px 0;
+  color:#5C3A21;
 }
-.hero-content h1{font-size:50px; margin-bottom:20px;}
-.hero-content p{font-size:20px;}
-.btn{background:#A67C52; color:white; padding:12px 25px; border-radius:10px; text-decoration:none;}
 
-/* CARDS DE PRODUTOS */
-.produtos{display:flex; flex-wrap:wrap; justify-content:center; gap:20px; padding:40px;}
-.produto{background:white; width:280px; border-radius:20px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.2);}
-.produto img{width:100%; height:220px; object-fit:cover;}
-.produto h3{padding:15px;}
-.produto p{padding-left:15px; font-weight:bold;}
-.produto button{margin:15px; width:90%; padding:12px; background:#A67C52; color:white; border:none; border-radius:10px; cursor:pointer;}
-
-/* TÍTULO PÁGINA */
-.titulo{text-align:center; margin-top:40px; font-size:30px; color:#5C3A21;}
-
-/* CARRINHO LATERAL */
-#carrinho-lateral{
-    position:fixed;
-    top:0;
-    right:0;
-    width:350px;
-    height:100%;
-    background:#fff;
-    box-shadow:-5px 0 15px rgba(0,0,0,0.3);
-    transform:translateX(100%);
-    transition:0.3s;
-    padding:20px;
-    overflow-y:auto;
-    z-index:1000;
+/* BOTÕES DE CATEGORIA */
+.categorias{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  margin:20px 0;
 }
-#carrinho-lateral.aberto{transform:translateX(0);}
-#carrinho-lateral h2{margin-bottom:20px; color:#5C3A21;}
-.item-carrinho{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;}
-.item-carrinho button{background:#A67C52; color:white; border:none; padding:2px 8px; border-radius:5px; cursor:pointer;}
+.btn-categoria{
+  display:inline-block;
+  padding:20px 30px;
+  background:#A67C52;
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  border-radius:15px;
+  transition:0.2s;
+}
+.btn-categoria:hover{
+  background:#5C3A21;
+}
 
-/* SELEÇÃO DE BAIRRO */
-#bairro{padding:8px; margin:10px 0; width:100%; border-radius:5px; border:1px solid #ccc;}
+/* INFORMAÇÕES DA EMPRESA */
+.info-empresa{
+  background:white;
+  display:inline-block;
+  padding:20px 30px;
+  margin:30px 0;
+  border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  text-align:left;
+}
+.info-empresa p{
+  margin:10px 0;
+  font-size:16px;
+}
 
 /* FOOTER */
-footer{background:#5C3A21; color:white; text-align:center; padding:20px; margin-top:50px;}
+footer{
+  background:#5C3A21;
+  color:white;
+  padding:20px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
