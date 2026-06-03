@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzas - Sousa Lanches</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+header{
+    background:#6b3e1f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+header h1{
+    font-size:32px;
+}
+
+.voltar{
+    display:inline-block;
+    margin-top:10px;
+    color:white;
+    text-decoration:none;
+}
+
+h2{
+    text-align:center;
+    margin:30px 0;
+    color:#6b3e1f;
+    font-size:42px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding-bottom:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#6b3e1f;
+    margin:15px 0;
+}
+
+.card p{
+    padding:0 15px;
+    min-height:80px;
+}
+
+.preco{
+    display:block;
+    color:green;
+    font-size:30px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+button{
+    width:90%;
+    margin-bottom:20px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#6b3e1f;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#8a542d;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🍕 Sousa Lanches</h1>
+    <a href="index.html" class="voltar">⬅ Voltar ao Cardápio</a>
+</header>
+
+<h2>Nossas Pizzas</h2>
+
+<div class="container">
+
+    <div class="card">
+        <img src="img/pizza-calabresa.jpg" alt="Calabresa">
+        <h3>Pizza Calabresa</h3>
+        <p>Molho artesanal, mussarela, calabresa fatiada, cebola e orégano.</p>
+        <span class="preco">R$ 39,90</span>
+        <button onclick="adicionarCarrinho('Pizza Calabresa',39.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pizza-mussarela.jpg" alt="Mussarela">
+        <h3>Pizza Mussarela</h3>
+        <p>Mussarela especial, molho artesanal e orégano.</p>
+        <span class="preco">R$ 37,90</span>
+        <button onclick="adicionarCarrinho('Pizza Mussarela',37.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pizza-frango.jpg" alt="Frango">
+        <h3>Frango com Catupiry</h3>
+        <p>Frango desfiado, catupiry, mussarela e orégano.</p>
+        <span class="preco">R$ 44,90</span>
+        <button onclick="adicionarCarrinho('Pizza Frango com Catupiry',44.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pizza-portuguesa.jpg" alt="Portuguesa">
+        <h3>Portuguesa</h3>
+        <p>Presunto, ovos, cebola, ervilha, mussarela e orégano.</p>
+        <span class="preco">R$ 46,90</span>
+        <button onclick="adicionarCarrinho('Pizza Portuguesa',46.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pizza-4queijos.jpg" alt="Quatro Queijos">
+        <h3>Quatro Queijos</h3>
+        <p>Mussarela, parmesão, provolone e catupiry.</p>
+        <span class="preco">R$ 49,90</span>
+        <button onclick="adicionarCarrinho('Pizza 4 Queijos',49.90)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="card">
+        <img src="img/pizza-bacon.jpg" alt="Bacon">
+        <h3>Bacon Especial</h3>
+        <p>Mussarela, bacon crocante, cheddar e molho especial.</p>
+        <span class="preco">R$ 52,90</span>
+        <button onclick="adicionarCarrinho('Pizza Bacon Especial',52.90)">Adicionar ao Carrinho</button>
+    </div>
+
+</div>
+
+<script>
+function adicionarCarrinho(nome, preco){
+
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    carrinho.push({
+        nome:nome,
+        preco:preco
+    });
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert(nome + " adicionado ao carrinho!");
+}
+</script>
+
+</body>
+</html>
